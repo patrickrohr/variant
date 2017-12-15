@@ -102,7 +102,7 @@ public:
 
 private:
     // Union containing data
-    std::aligned_union<size_type, Ts...> m_data;
+    typename std::aligned_union<size_type, Ts...>::type m_data;
     // size_t containing typeinfo hash
     std::size_t m_type;
 
